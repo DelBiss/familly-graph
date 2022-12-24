@@ -1,0 +1,26 @@
+{
+    "name": "my_package",
+    "version": "1.0.0",
+    "description": "my_description",
+    "main": "index.js",
+    "files": [
+        "lib/**/*"
+    ],
+    "scripts": {
+        "test": "jest --config jestconfig.json",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "lint": "tslint -p tsconfig.json",
+        "build": "tsc"
+    },
+    "author": "Philippe Allard-Rousse <philrousse@gmail.com>",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/jest": "^27.4.1",
+        "jest": "^27.5.1",
+        "prettier": "^2.6.2",
+        "ts-jest": "^27.1.4",
+        "tslint": "^6.1.3",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^4.6.3"
+    }
+}
