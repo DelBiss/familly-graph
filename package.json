@@ -7,10 +7,19 @@
         "lib/**/*"
     ],
     "scripts": {
-        "test": "jest --config jestconfig.json",
-        "format": "prettier --write \"src/**/*.ts\"",
         "lint": "tslint -p tsconfig.json",
-        "build": "tsc"
+        "format": "prettier --write \"src/**/*.ts\"",
+        "test": "jest --config jestconfig.json",
+        "build": "tsc -b",
+        "test-clean": "jest --config jestconfig-full.json",
+        "precommit": "npm run test-clean",
+        "build-clean": "tsc -b --force",
+        "prepare": "copy .\\scripts\\pre-commit .\\.git\\hooks\\",
+        "pretest-clean": "npm run build-clean",
+        "test-full": "jest --config jestconfig-full.json",
+        "clean": "rimraf lib/",
+        "prebuild-clean": "npm run clean",
+        "preprecommit": "npm run lint && npm run format"
     },
     "author": "Philippe Allard-Rousse <philrousse@gmail.com>",
     "license": "ISC",
