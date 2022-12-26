@@ -5,7 +5,7 @@ export interface FamilyGraph {
     addIndividual(i: Individual): Individual;
     addIndividual(...i: Individual[]): Individual[];
     addIndividual(i: Individual[]): Individual[];
-    getAllIndividual():Individual[];
+    getAllIndividual(): Individual[];
     /////////////
     linkCouple(chef: Individual, other: Individual): void;
     linkCouple(i: [Individual, Individual]): void;

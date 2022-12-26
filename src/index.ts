@@ -61,6 +61,4 @@ export class Family implements FamilyGraph {
     linkChildren(child: unknown, parents?: unknown, ...rest: Individual[]): void {
         throw new Error("Method not implemented.");
     }
-
-    
 }
