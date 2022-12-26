@@ -2,8 +2,10 @@ import { Individual } from "./individual";
 
 export interface FamilyGraph {
     name?: string;
-    addIndiviual(i: Individual): Individual;
-
+    addIndividual(i: Individual): Individual;
+    addIndividual(...i: Individual[]): Individual[];
+    addIndividual(i: Individual[]): Individual[];
+    getAllIndividual():Individual[];
     /////////////
     linkCouple(chef: Individual, other: Individual): void;
     linkCouple(i: [Individual, Individual]): void;
