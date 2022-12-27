@@ -8,6 +8,10 @@
     "displayName":{
         "name": "FamillyGraph",
         "color": "blue"
-      }
+      },
+      "silent": false,
+      "verbose":false,
+      "coverageReporters":["lcov"],
+      "collectCoverage":true
 
 }
